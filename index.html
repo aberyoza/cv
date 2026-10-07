@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Oleksii Bereza · Engineering Manager</title>
+<meta name="description" content="Engineering Manager leading DevOps, infrastructure and cross-functional teams in high-load environments. Reliability, delivery, people leadership.">
+<meta property="og:title" content="Oleksii Bereza · Engineering Manager">
+<meta property="og:description" content="Infrastructure · Reliability · Delivery · People Leadership">
+<meta property="og:type" content="profile">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2316201c'/><circle cx='16' cy='16' r='6' fill='%2334b27a'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* Layout: a status-page CV for a reliability-minded manager. Header with a live "status" line, an impact strip of real numbers, then experience in the main column and reference facts (skills, languages, education, courses) in a side column; one column on phones; a clean print layout. */
+  :root {
+    --paper: #f5f6f3;
+    --card: #ffffff;
+    --ink: #16201c;
+    --muted: #5b6862;
+    --rule: #dde2dd;
+    --signal: #1f8a5b;
+    --signal-soft: #e2f2ea;
+
+    --f-head: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+    --f-body: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+    --f-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0f1412; --card: #161d1a; --ink: #e5ebe7; --muted: #95a39c;
+      --rule: #29332f; --signal: #46c08a; --signal-soft: #18332a; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0f1412; --card: #161d1a; --ink: #e5ebe7; --muted: #95a39c;
+    --rule: #29332f; --signal: #46c08a; --signal-soft: #18332a; color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--f-body);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  a { color: inherit; }
+
+  .wrap {
+    max-width: 68rem;
+    margin: 0 auto;
+    padding-inline: 16px;
+    padding-block: clamp(2rem, 6vw, 4.5rem) 4rem;
+    display: grid;
+    gap: 2.5rem;
+  }
+  @media (min-width: 40rem) { .wrap { padding-inline: 2rem; } }
+
+  /* header */
+  header { display: grid; gap: 1.1rem; }
+  .status {
+    display: inline-flex; align-items: center; gap: .55rem;
+    justify-self: start;
+    font-family: var(--f-mono); font-size: .78rem; letter-spacing: .02em;
+    color: var(--signal);
+    background: var(--signal-soft);
+    border-radius: 14px;
+    padding: .3rem .8rem .3rem .65rem;
+    line-height: 1.4;
+  }
+  .status i { flex: none;
+    width: .55rem; height: .55rem; border-radius: 50%;
+    background: var(--signal);
+    box-shadow: 0 0 0 0 var(--signal);
+    animation: ping 2.4s ease-out infinite;
+  }
+  @keyframes ping {
+    0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--signal) 55%, transparent); }
+    70%, 100% { box-shadow: 0 0 0 .5rem transparent; }
+  }
+  h1 {
+    font-family: var(--f-head);
+    font-weight: 800;
+    font-size: clamp(2.6rem, 8vw, 4.6rem);
+    line-height: .98;
+    letter-spacing: -.025em;
+    margin: 0;
+  }
+  .role {
+    font-family: var(--f-head);
+    font-weight: 500;
+    font-size: clamp(1.2rem, 3vw, 1.55rem);
+    margin: 0;
+  }
+  .role span { color: var(--muted); }
+  .lede { margin: 0; max-width: 62ch; font-size: 1.08rem; color: var(--ink); }
+  .lede + .lede { color: var(--muted); }
+
+  .contacts {
+    display: flex; flex-wrap: wrap; gap: .6rem;
+    margin-top: .4rem;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: .5rem;
+    font: 500 .92rem/1 var(--f-body);
+    text-decoration: none;
+    color: var(--ink);
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: .7rem 1rem;
+    cursor: pointer;
+  }
+  .btn:hover { border-color: var(--ink); }
+  .btn.primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .btn:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; }
+  .btn svg { width: 1rem; height: 1rem; flex: none; }
+  .loc { font-family: var(--f-mono); font-size: .8rem; color: var(--muted); align-self: center; padding-inline: .3rem; }
+  .copied { font-family: var(--f-mono); font-size: .78rem; color: var(--signal); align-self: center; }
+
+  /* impact strip */
+  .impact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    background: var(--card);
+    overflow: hidden;
+  }
+  .metric {
+    padding: 1.1rem 1.2rem 1.2rem;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin: 0 -1px -1px 0;
+    display: grid; gap: .25rem; align-content: start;
+  }
+  .metric b {
+    font-family: var(--f-head); font-weight: 700;
+    font-size: 1.85rem; line-height: 1.1; letter-spacing: -.02em;
+    font-variant-numeric: tabular-nums;
+  }
+  .metric b small { font-size: 1rem; color: var(--muted); font-weight: 500; }
+  .metric span { font-size: .88rem; color: var(--muted); line-height: 1.45; }
+
+  /* body columns */
+  .cols { display: grid; gap: 3rem; }
+  @media (min-width: 60rem) { .cols { grid-template-columns: minmax(0, 1fr) 19rem; gap: 4rem; } }
+
+  h2 {
+    font-family: var(--f-mono);
+    font-weight: 500;
+    font-size: .76rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 1.1rem;
+    padding-bottom: .55rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .jobs { display: grid; gap: 2.2rem; }
+  .job { display: grid; gap: .5rem; min-width: 0; }
+  .job-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .2rem 1rem; align-items: baseline; }
+  .job h3 { font-family: var(--f-head); font-weight: 700; font-size: 1.22rem; margin: 0; line-height: 1.25; }
+  .when { font-family: var(--f-mono); font-size: .8rem; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .where { font-size: .93rem; color: var(--muted); margin: 0; }
+  .where strong { color: var(--ink); font-weight: 600; }
+  .now { font-family: var(--f-mono); font-size: .7rem; color: var(--signal); background: var(--signal-soft); border-radius: 4px; padding: .05rem .4rem; margin-left: .4rem; vertical-align: .1em; }
+  ul { margin: .2rem 0 0; padding-left: 1.1rem; display: grid; gap: .4rem; }
+  li { padding-left: .2rem; max-width: 70ch; }
+  li::marker { color: var(--signal); }
+
+  .wins { display: grid; gap: 1rem; margin-top: 3rem; }
+  .win { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 1rem 1.15rem; }
+  .win p { margin: 0; }
+  .win .tag { font-family: var(--f-mono); font-size: .74rem; color: var(--signal); margin-bottom: .3rem; display: block; }
+
+  aside { display: grid; gap: 2.4rem; align-content: start; }
+  .chips { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .chip { font-size: .85rem; border: 1px solid var(--rule); background: var(--card); border-radius: 6px; padding: .25rem .55rem; }
+  dl { margin: 0; display: grid; gap: .9rem; }
+  dl div { display: grid; gap: .1rem; }
+  dt { font-weight: 600; line-height: 1.35; }
+  dd { margin: 0; font-size: .9rem; color: var(--muted); }
+  .lang { display: grid; grid-template-columns: 1fr auto; gap: .45rem 1rem; font-size: .95rem; }
+  .lang span:nth-child(even) { font-family: var(--f-mono); font-size: .82rem; color: var(--muted); }
+
+  footer { font-family: var(--f-mono); font-size: .76rem; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 1.2rem; }
+
+  @media (prefers-reduced-motion: reduce) { .status i { animation: none; } }
+
+  @media print {
+    :root { --paper: #fff; --card: #fff; --ink: #000; --muted: #444; --rule: #ccc; --signal: #1f6e4b; --signal-soft: #fff; color-scheme: light; }
+    body { font-size: 10pt; line-height: 1.45; }
+    .wrap { padding: 0; gap: 1.2rem; max-width: none; }
+    .contacts .btn:not(.keep), .copied, .status { display: none !important; }
+    .btn.keep { border: 0; padding: 0; background: none; color: #000; }
+    h1 { font-size: 26pt; }
+    .impact { grid-template-columns: repeat(4, 1fr); }
+    .metric b { font-size: 15pt; }
+    .cols { grid-template-columns: minmax(0, 1fr) 15rem; gap: 2rem; }
+    .job, .win { break-inside: avoid; }
+    .jobs { gap: 1.1rem; }
+    footer { display: none; }
+    @page { margin: 14mm; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="status"><i></i><span>Open to Engineering Manager · Technical Project Manager · Delivery Manager roles</span></div>
+    <h1>Oleksii Bereza</h1>
+    <p class="role">Engineering Manager <span>· Infrastructure · Reliability · Delivery · People Leadership</span></p>
+    <p class="lede">Engineering Manager with experience leading DevOps, infrastructure, and cross-functional teams (FE/BE) in high-load environments.</p>
+    <p class="lede">I lead through context and trust: understanding the technical depth well enough to support engineers, and the business well enough to align priorities that matter.</p>
+    <div class="contacts">
+      <a class="btn primary keep" id="email" href="#" data-goatcounter-click="click-email" data-goatcounter-title="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        <span id="email-text">Email me</span>
+      </a>
+      <a class="btn keep" href="https://www.linkedin.com/in/oleksii-bereza/" target="_blank" rel="noopener" data-goatcounter-click="click-linkedin" data-goatcounter-title="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.5h4V21H3V9.5Zm7 0h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.79-1.7-2.79-1.7 0-1.96 1.33-1.96 2.7V21h-4V9.5Z"/></svg>
+        linkedin.com/in/oleksii-bereza
+      </a>
+      <button class="btn" id="print" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>
+        Save as PDF
+      </button>
+      <span class="loc">Ukraine</span>
+      <span class="copied" id="copied" hidden>Address copied</span>
+    </div>
+  </header>
+
+  <section class="impact" aria-label="Impact in numbers">
+    <div class="metric"><b>16</b><span>DevOps engineers led, ~66% higher team productivity</span></div>
+    <div class="metric"><b>100%</b><span>team retention over 3 years</span></div>
+    <div class="metric"><b>99% <small>SLA</small></b><span>up from below baseline via incident management and on-call routines</span></div>
+    <div class="metric"><b>$32k → &lt;$8k</b><span>monthly CDN cost after leading a vendor exit from Cloudflare</span></div>
+  </section>
+
+  <div class="cols">
+    <main>
+      <h2>Work experience</h2>
+      <div class="jobs">
+
+        <article class="job">
+          <div class="job-head"><h3>Product Project Manager<span class="now">now</span></h3><span class="when">Mar 2026 – Present</span></div>
+          <p class="where"><strong>IT / MilTech</strong> · Full-time · On-site</p>
+          <ul>
+            <li>Acting as a full-cycle technical manager: requirements analysis, solution design, implementation, and infrastructure support.</li>
+            <li>Combining BA, PM, and hands-on engineering responsibilities in a resource-constrained environment.</li>
+            <li>Delivering end-to-end across the full technical stack, from business needs to working systems.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-head"><h3>Management Coach<span class="now">now</span></h3><span class="when">Sep 2025 – Present</span></div>
+          <p class="where"><strong>Independent</strong></p>
+          <ul>
+            <li>Coaching managers on leadership skills, team dynamics, and interview preparation.</li>
+            <li>Working with up to 8 clients simultaneously via referral network.</li>
+            <li>Clients who followed structured coaching framework successfully received job offers.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-head"><h3>Engineering Manager</h3><span class="when">Jun 2023 – Mar 2026</span></div>
+          <p class="where"><strong>NDA</strong> · Full-time · Hybrid</p>
+          <ul>
+            <li>Led a DevOps team of 16 engineers, improving delivery predictability and increasing overall team productivity by ~66%.</li>
+            <li>Improved deployment and release processes through automation and process optimization, reducing deployment time by ~30% and lowering operational error rates by ~15%.</li>
+            <li>Owned delivery reliability and operational stability across infrastructure-heavy environments, working closely with engineering and leadership teams.</li>
+            <li>Partnered with C-level stakeholders to align infrastructure priorities with business goals, improving delivery outcomes and stakeholder confidence.</li>
+            <li>Negotiated contracts, pricing, and SLAs with vendors including Cloudflare, AWS, BunnyCDN, Fastly, and bare-metal hosting providers.</li>
+            <li>Eliminated 3 critical single points of failure (bus factor) across the engineering team.</li>
+            <li>Played a key role in hiring and scaling the DevOps team, strengthening overall engineering capacity and team maturity.</li>
+            <li>Maintained 100% team retention over 3 years by building trust-based team dynamics, psychological safety, and sustainable workload practices.</li>
+            <li>Applied people-centered leadership and psychodynamic management principles to address team tensions, reduce burnout risk, and improve long-term team effectiveness.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-head"><h3>DevOps Process Consultant</h3><span class="when">Sep 2023 – Dec 2023</span></div>
+          <p class="where"><strong>Confidential EdTech Company</strong> · Part-time (evenings, parallel engagement)</p>
+          <ul>
+            <li>Conducted infrastructure and delivery process audit, identifying gaps in observability, incident response, and service ownership.</li>
+            <li>Implemented post-mortem process, improving incident response and team reaction time.</li>
+            <li>Established full infrastructure observability with monitoring coverage across all services.</li>
+            <li>Introduced service ownership model, distributing maintenance responsibility across maintainers and reducing single points of failure.</li>
+            <li>Led FinOps initiative: negotiated with AWS, reducing cloud spend by ~20%.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-head"><h3>Agile Project Manager</h3><span class="when">May 2021 – Mar 2023</span></div>
+          <p class="where"><strong>COMPARUS.UA</strong> · Full-time · Dnipro, Ukraine</p>
+          <ul>
+            <li>Pioneered blue/green deployment strategy company-wide, achieving zero-downtime releases and reducing deployment time from ~30 minutes to near-instant cutover.</li>
+            <li>Led infrastructure initiatives: HTTPS migration, new environment provisioning, and zero-environment setup, improving system benchmarks and laying the foundation for stable delivery.</li>
+            <li>Drove SLA from below baseline to 99% through improved incident management practices and clearer on-call routines.</li>
+            <li>Managed coordination across a DevOps team of 10, streamlining sprint planning and backlog prioritization with Product Owners to improve delivery alignment.</li>
+            <li>Introduced a team recognition system and a no-blame culture around mistakes, increasing psychological safety and sustained team engagement.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-head"><h3>Delivery &amp; Operations Manager</h3><span class="when">Feb 2020 – May 2021</span></div>
+          <p class="where"><strong>Taurus Quadra</strong> · Full-time · Slavutych, Ukraine</p>
+          <ul>
+            <li>Managed end-to-end client delivery for custom software and infrastructure-related projects, covering presales, execution, and delivery phases.</li>
+            <li>Worked closely with clients to clarify requirements, define scope, and translate business needs into executable delivery plans.</li>
+            <li>Coordinated distributed engineering teams, ensuring smooth collaboration, predictable delivery, and timely project outcomes.</li>
+            <li>Owned delivery risks and change management, minimizing disruptions and ensuring continuity during project execution.</li>
+            <li>Self-sourced and independently managed 7 client projects end-to-end, from presales through delivery, with 100% payment rate.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="wins">
+        <h2>Key achievements</h2>
+        <div class="win"><span class="tag">migration · 6 → 2 months</span><p>Reorganized and led a critical infrastructure migration, reducing preparation time from 6 months to 2 months and cutting production downtime from ~12 hours to ~10 minutes.</p></div>
+        <div class="win"><span class="tag">vendor exit · $32k → &lt;$8k / month</span><p>Took ownership of a high-risk vendor exit from Cloudflare after a sudden cost increase (from $1.5k to $32k/month), negotiated an interim pricing agreement ($14k/month), and led migration to a new provider, reducing recurring infrastructure costs to &lt;$8k/month.</p></div>
+        <div class="win"><span class="tag">ownership · 4 teams</span><p>Initiated and delivered a cross-team monitoring and ownership model across DevOps, backend, frontend, and payments teams, establishing clear service responsibility where none previously existed.</p></div>
+        <div class="win"><span class="tag">retention · 100% over 3 years</span><p>Built trust-based team dynamics and psychological safety practices that resulted in 100% team retention over 3 years, even during periods of operational stress and infrastructure change.</p></div>
+      </div>
+    </main>
+
+    <aside>
+      <section>
+        <h2>Skills</h2>
+        <div class="chips">
+          <span class="chip">Engineering Leadership</span>
+          <span class="chip">People Management</span>
+          <span class="chip">Team Development &amp; Retention</span>
+          <span class="chip">Conflict Resolution</span>
+          <span class="chip">Psychologically Safe Teams</span>
+          <span class="chip">CI/CD concepts</span>
+          <span class="chip">Monitoring &amp; Alerting</span>
+          <span class="chip">Incident Management</span>
+          <span class="chip">Delivery Management</span>
+          <span class="chip">Blue/Green Deployment</span>
+          <span class="chip">Zero Downtime Deployment</span>
+          <span class="chip">On-Call Management</span>
+          <span class="chip">Vendor Negotiation</span>
+          <span class="chip">FinOps</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Languages</h2>
+        <div class="lang">
+          <span>English</span><span>C1</span>
+          <span>Ukrainian</span><span>Native</span>
+          <span>Italian</span><span>A2</span>
+          <span>Polish</span><span>A2</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <dl>
+          <div><dt>Master's Degree, Tourism Management</dt><dd>Uczelnia Vistula, Warsaw · 2014 – 2016</dd></div>
+          <div><dt>Bachelor's Degree, English Philology</dt><dd>Gogol State Pedagogical University, Nizhyn · 2010 – 2014</dd></div>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Courses &amp; certifications</h2>
+        <dl>
+          <div><dt>Delivery Management</dt><dd>Robot_Dreams · Sep – Dec 2024</dd></div>
+          <div><dt>Leading SAFe 5.1</dt><dd>E5 · Dec 2023</dd></div>
+          <div><dt>Agile Project Management</dt><dd>Google · 2023</dd></div>
+          <div><dt>Foundations of Project Management</dt><dd>Google · 2023</dd></div>
+          <div><dt>ICAgile Certified Professional</dt><dd>ICAgile · Jul 2022</dd></div>
+        </dl>
+      </section>
+    </aside>
+  </div>
+
+  <footer>Oleksii Bereza · Engineering Manager · Ukraine</footer>
+</div>
+
+<script>
+  // GoatCounter site code (the part before .goatcounter.com). Empty = analytics off.
+  const GOATCOUNTER = "oleksii";
+
+  // email is assembled at runtime so scrapers don't find it in the HTML
+  const addr = ["alexberyozagoo", "gmail.com"].join("@");
+  const email = document.getElementById("email");
+  email.href = "mailto:" + addr;
+  document.getElementById("email-text").textContent = addr;
+  email.addEventListener("click", () => {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(addr).then(() => {
+        const c = document.getElementById("copied");
+        c.hidden = false;
+        setTimeout(() => { c.hidden = true; }, 2500);
+      }).catch(() => {});
+    }
+  });
+
+  document.getElementById("print").addEventListener("click", () => window.print());
+
+  if (GOATCOUNTER) {
+    const s = document.createElement("script");
+    s.async = true;
+    s.src = "https://gc.zgo.at/count.js";
+    s.dataset.goatcounter = `https://${GOATCOUNTER}.goatcounter.com/count`;
+    document.body.appendChild(s);
+    window.addEventListener("beforeprint", () => window.goatcounter?.count?.({ path: "print", title: "Printed / saved PDF", event: true }));
+  }
+</script>
+</body>
+</html>
